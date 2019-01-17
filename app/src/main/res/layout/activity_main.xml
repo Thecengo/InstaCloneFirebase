@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/editTextEMail"
+        android:layout_width="281dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="169dp"
+        android:ems="10"
+        android:hint="e-mail"
+        android:inputType="textEmailAddress"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.611"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextPassword"
+        android:layout_width="273dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="46dp"
+        android:ems="10"
+        android:hint="password"
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="@+id/editTextEMail"
+        app:layout_constraintStart_toStartOf="@+id/editTextEMail"
+        app:layout_constraintTop_toBottomOf="@+id/editTextEMail" />
+
+    <Button
+        android:id="@+id/btnGiris"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="59dp"
+        android:layout_marginEnd="8dp"
+        android:onClick="signInClick"
+        android:text="GİRİŞ YAP"
+        app:layout_constraintEnd_toStartOf="@+id/btnKaydol"
+        app:layout_constraintStart_toStartOf="@+id/editTextPassword"
+        app:layout_constraintTop_toBottomOf="@+id/editTextPassword" />
+
+    <Button
+        android:id="@+id/btnKaydol"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="77dp"
+        android:onClick="signUpClick"
+        android:text="KAYDOL"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btnGiris"
+        app:layout_constraintEnd_toEndOf="parent" />
+</android.support.constraint.ConstraintLayout>
